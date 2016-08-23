@@ -20,9 +20,11 @@ public class YoutubeResponse {
     /**
      * Default Constructor for class YoutubeResponse
      */
-    public YoutubeResponse(){}
-
-
+    public YoutubeResponse(String videoID, String videoTitle, String videoThumbnail) {
+        this.videoID = videoID;
+        this.videoTitle = videoTitle;
+        this.videoThumbnail = videoThumbnail;
+    }
     /**
      * Getter methods for class YoutubeResponse instance variables
      * @return
