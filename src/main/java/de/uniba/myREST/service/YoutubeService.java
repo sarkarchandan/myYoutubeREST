@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NoContentException;
 import javax.ws.rs.core.Response;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -48,13 +49,13 @@ public class YoutubeService {
          * Getting the List of videos from the YoutubeEngine class and publishing as JSON type objects.
          */
 
-        if (searchQuery.equals("")||searchQuery==null){
+        if (searchQuery==null||searchQuery.equals("")){
             loggerYoutubeService.log(Level.WARNING,"Empty search parameter");
             return Response.status(Response.Status.BAD_REQUEST).entity("Bad Request").build();
         }
 
         try {
-            GenericEntity<List<YoutubeResponse>> response = new GenericEntity<List<YoutubeResponse>>(YoutubeEngine.getYoutubeVideosFromEngine(searchQuery)) {};
+            List<YoutubeResponse> response = YoutubeEngine.getYoutubeVideosFromEngine(searchQuery);
             loggerYoutubeService.info("Class YoutubeService: Done logging");
             return Response.ok(response, MediaType.APPLICATION_JSON).build();
 

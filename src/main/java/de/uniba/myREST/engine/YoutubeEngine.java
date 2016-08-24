@@ -1,14 +1,19 @@
 package de.uniba.myREST.engine;
 
+
+import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
+
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
 import de.uniba.myREST.response.YoutubeResponse;
+import de.uniba.myREST.engine.Auth;
+import jersey.repackaged.com.google.common.collect.Lists;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,6 +54,10 @@ public class YoutubeEngine {
          */
         List<YoutubeResponse> youtubeVideoObjectList = new LinkedList<>();
 
+        // This OAuth 2.0 access scope allows for full read/write access to the
+        // authenticated user's account.
+        List<String> scopes = Lists.newArrayList("https://www.googleapis.com/auth/youtube");
+
         loggerYoutubeEngine.setLevel(Level.ALL);
         loggerYoutubeEngine.info("Class YoutubeEngine: Start Logging");
 
@@ -69,10 +78,17 @@ public class YoutubeEngine {
             /**
              * Defining Youtube Data Api request through the object of Youtube.
              */
+            /*
             youTube = new YouTube.Builder(new NetHttpTransport(), new JacksonFactory(), new HttpRequestInitializer() {
                 public void initialize(HttpRequest request) throws IOException {
                 }
             }).setApplicationName("youtube-RESTfulAPI").build();
+            */
+            Credential credential = Auth.authorize(scopes,"search");
+
+            youTube = new YouTube.Builder(Auth.HTTP_TRANSPORT, Auth.JSON_FACTORY, credential)
+                    .setApplicationName("youtube-cmdline-playlistupdates-sample")
+                    .build();
 
             /**
              * Define the API Request for retrieving search result from Youtube
