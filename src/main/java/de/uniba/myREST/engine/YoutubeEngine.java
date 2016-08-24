@@ -9,7 +9,6 @@ import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
 import de.uniba.myREST.response.YoutubeResponse;
-import org.apache.http.auth.AUTH;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,7 +42,7 @@ public class YoutubeEngine {
     private static YouTube youTube;
 
 
-    public List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery){
+    public static List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery){
 
         /**
          * Declaring a List of Objects to contain the Youtube Videos
@@ -55,8 +54,11 @@ public class YoutubeEngine {
 
         Properties youtubeProperties = new Properties();
         try {
-            InputStream inputStream = YoutubeEngine.class.getResourceAsStream("./src/main/java/" + propertyFileName);
+            InputStream inputStream = YoutubeEngine.class.getResourceAsStream("/"+propertyFileName);
             youtubeProperties.load(inputStream);
+
+
+
         }catch(IOException e){
             loggerYoutubeEngine.log(Level.SEVERE,"Class YoutubeEngine: Cannot read necessary properties"+e.getCause());
         }
@@ -109,8 +111,8 @@ public class YoutubeEngine {
                 if(eachVideoObject.getKind().equals("youtube#video")) {
 
                     youtubeVideoObjectList.add(new YoutubeResponse(eachVideoObject.getId().toString(),
-                            eachVideoObject.getSnippet().getTitle(),
-                            eachVideoObject.getSnippet().getThumbnails().getDefault().getUrl()));
+                            eachVideoObject.getSnippet().getTitle().toString(),
+                            eachVideoObject.getSnippet().getThumbnails().getDefault().getUrl().toString()));
                 }
             }
 

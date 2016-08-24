@@ -6,6 +6,7 @@ import de.uniba.myREST.response.YoutubeResponse;
 import javax.ws.rs.*;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.NoContentException;
 import javax.ws.rs.core.Response;
 
 import java.util.List;
@@ -20,7 +21,7 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
  * Created by chandan on 23.08.16.
  */
 
-@Path("/youtube/search")
+@Path("/youtubeVideos")
 public class YoutubeService {
 
 
@@ -46,16 +47,24 @@ public class YoutubeService {
         /**
          * Getting the List of videos from the YoutubeEngine class and publishing as JSON type objects.
          */
-        YoutubeEngine youtubeEngineObject = new YoutubeEngine();
-        GenericEntity<List<YoutubeResponse>> response = new GenericEntity<List<YoutubeResponse>>(youtubeEngineObject.getYoutubeVideosFromEngine(searchQuery)){};
 
-        if(response.getEntity().size()==0){
-            loggerYoutubeService.log(Level.SEVERE,"We have not received any Youtube Video matching the search query");
+        if (searchQuery.equals("")||searchQuery==null){
+            loggerYoutubeService.log(Level.WARNING,"Empty search parameter");
+            return Response.status(Response.Status.BAD_REQUEST).entity("Bad Request").build();
         }
 
-        loggerYoutubeService.info("Class YoutubeService: Done logging");
-        return Response.ok(response, MediaType.APPLICATION_JSON).build();
+        try {
+            GenericEntity<List<YoutubeResponse>> response = new GenericEntity<List<YoutubeResponse>>(YoutubeEngine.getYoutubeVideosFromEngine(searchQuery)) {};
+            loggerYoutubeService.info("Class YoutubeService: Done logging");
+            return Response.ok(response, MediaType.APPLICATION_JSON).build();
 
+        }catch (InternalServerErrorException iSE){
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Internal Server Error occured").build();
+        }catch (ForbiddenException fB){
+            return Response.status(Response.Status.FORBIDDEN).entity("Forbidden").build();
+        }catch (NotFoundException nF){
+            return Response.status(Response.Status.NOT_FOUND).entity("Resource Not Found").build();
+        }
 
     }
 
