@@ -2,6 +2,7 @@ package de.uniba.myREST.engine;
 
 
 import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestInitializer;
@@ -9,14 +10,17 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 
 import com.google.api.services.youtube.YouTube;
+import com.google.api.services.youtube.model.ResourceId;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
+import com.google.api.services.youtube.model.Thumbnail;
 import de.uniba.myREST.response.YoutubeResponse;
-import de.uniba.myREST.engine.Auth;
+//import de.uniba.myREST.engine.Auth;
 import jersey.repackaged.com.google.common.collect.Lists;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
@@ -38,8 +42,12 @@ public class YoutubeEngine {
      * Initializing global variables for property file name and no of Search results.
      * Property File will be used for authentication purpose for our project in Google Developer Console with pre-established API Key.
      */
+
+    /**
+     * Comment: I am not using api_key any more. Disabling this code segment to test
     private static final String propertyFileName = "youtube.properties";
-    private static final long noOfVideosRequired = 25;
+     */
+    private static final long noOfVideosRequired = 10;
 
     /**
      * Defining a Global Instance of the Youtube Object which will be used for API Request to Youtube Data API
@@ -47,7 +55,7 @@ public class YoutubeEngine {
     private static YouTube youTube;
 
 
-    public static List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery){
+    public static void getYoutubeVideosFromEngine(String searchQuery){
 
         /**
          * Declaring a List of Objects to contain the Youtube Videos
@@ -61,6 +69,9 @@ public class YoutubeEngine {
         loggerYoutubeEngine.setLevel(Level.ALL);
         loggerYoutubeEngine.info("Class YoutubeEngine: Start Logging");
 
+
+        /**
+         * Comment: I am not using api_key any more. Disabling this code segment to test
         Properties youtubeProperties = new Properties();
         try {
             InputStream inputStream = YoutubeEngine.class.getResourceAsStream("/"+propertyFileName);
@@ -71,24 +82,34 @@ public class YoutubeEngine {
         }catch(IOException e){
             loggerYoutubeEngine.log(Level.SEVERE,"Class YoutubeEngine: Cannot read necessary properties"+e.getCause());
         }
+         */
 
 
         try {
 
-            /**
-             * Defining Youtube Data Api request through the object of Youtube.
-             */
-            /*
-            youTube = new YouTube.Builder(new NetHttpTransport(), new JacksonFactory(), new HttpRequestInitializer() {
-                public void initialize(HttpRequest request) throws IOException {
-                }
-            }).setApplicationName("youtube-RESTfulAPI").build();
-            */
-            Credential credential = Auth.authorize(scopes,"search");
 
-            youTube = new YouTube.Builder(Auth.HTTP_TRANSPORT, Auth.JSON_FACTORY, credential)
-                    .setApplicationName("youtube-cmdline-playlistupdates-sample")
+            /**
+             * Authorization
+             * Generating Refresh token
+             */
+            String clientID = "862649508795-f16sicfh2gf1129dh7p4nr6on49mv4io.apps.googleusercontent.com";
+            String clientSecret = "tiMBfl6J6udwBXPaPTrG_tj6";
+            String refreshToken = "1/tUebO5PoBaWubw32MYffPYYApOrOZqy0ZIlpSQoUaNw";
+
+            Credential credential;
+            credential = new GoogleCredential.Builder()
+                    .setTransport(new NetHttpTransport())
+                    .setJsonFactory(new JacksonFactory())
+                    .setClientSecrets(clientID,clientSecret)
                     .build();
+            credential.setRefreshToken(refreshToken);
+
+            youTube = new YouTube.Builder(Auth.HTTP_TRANSPORT, Auth.JSON_FACTORY,credential)
+                    .setApplicationName("newRESTProject")
+                    .build();
+
+
+            loggerYoutubeEngine.info("Credential Built");
 
             /**
              * Define the API Request for retrieving search result from Youtube
@@ -102,35 +123,51 @@ public class YoutubeEngine {
              * Defining that we only want a fixed no of videos
              * Defining the data we expect about each video object
              */
-            String apiKey  = youtubeProperties.getProperty("youTube.apiKey");
-            searchList.setKey(apiKey);
+            /**
+             * Comment: I am not using api_key any more. Disabling this code segment to test
+             String apiKey  = youtubeProperties.getProperty("youTube.apiKey");
+             searchList.setKey(apiKey);
+             searchList.setKey(credential.getAccessToken());
+             */
+
+
+
+
+            searchList.setOauthToken(credential.getAccessToken());
             searchList.setQ(searchQuery);
             searchList.setType("video");
             searchList.setMaxResults(noOfVideosRequired);
-            searchList.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/defualt/url)");
+            //searchList.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/defualt/url)");
 
             /**
              * Calling the Youtube Data Api to get the Video Objects and store them in a List of SearchResult
              * SearchResult data type has been defined in Youtube Data Api
              */
-            SearchListResponse videoSearchResponse = searchList.execute();
-            List<SearchResult> searchResultList = videoSearchResponse.getItems();
+            SearchListResponse searchResponse = searchList.execute();
+            List<SearchResult> searchResultList = searchResponse.getItems();
 
             /**
              * Extracting the Video Data as a list of YoutubeResponse type using Constructor
              */
-            if(searchResultList.isEmpty()){
+
+            if(searchResultList==null){
                 loggerYoutubeEngine.log(Level.SEVERE,"We have not found any matching Videos from Youtube Data API");
+
             } else
-            for(SearchResult eachVideoObject:searchResultList){
+                loggerYoutubeEngine.info("We have got a list");
+            prettyPrint(searchResultList.iterator(), searchQuery);
 
-                if(eachVideoObject.getKind().equals("youtube#video")) {
+            //for(SearchResult eachVideoObject:searchResultList){
 
-                    youtubeVideoObjectList.add(new YoutubeResponse(eachVideoObject.getId().toString(),
-                            eachVideoObject.getSnippet().getTitle().toString(),
-                            eachVideoObject.getSnippet().getThumbnails().getDefault().getUrl().toString()));
-                }
-            }
+                //if(eachVideoObject.getKind().equals("youtube#video")) {
+
+                    loggerYoutubeEngine.info("We have got videos");
+                    //youtubeVideoObjectList.add(new YoutubeResponse(eachVideoObject.getId().toString(),
+                      //      eachVideoObject.getSnippet().getTitle().toString(),
+                        //    eachVideoObject.getSnippet().getThumbnails().getDefault().getUrl().toString()));
+                    //System.out.println (eachVideoObject.getId());
+                //}
+            //}
 
         }catch(GoogleJsonResponseException gJRE){
             loggerYoutubeEngine.log(Level.SEVERE,"There was a service disruption"+gJRE.getCause()+gJRE.getMessage());
@@ -140,9 +177,52 @@ public class YoutubeEngine {
         }
 
         loggerYoutubeEngine.info("Class YoutubeEngine: Done logging");
-        return youtubeVideoObjectList;
+        //return youtubeVideoObjectList;
+
 
     }
+
+
+    public static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
+
+        System.out.println("\n=============================================================");
+        System.out.println(
+                "   First " + noOfVideosRequired + " videos for search on \"" + query + "\".");
+        System.out.println("=============================================================\n");
+
+        if (!iteratorSearchResults.hasNext()) {
+            System.out.println(" There aren't any results for your query.");
+        }
+
+        while (iteratorSearchResults.hasNext()) {
+
+            SearchResult singleVideo = iteratorSearchResults.next();
+            ResourceId rId = singleVideo.getId();
+
+            // Confirm that the result represents a video. Otherwise, the
+            // item will not contain a video ID.
+            if (rId.getKind().equals("youtube#video")) {
+                Thumbnail thumbnail = singleVideo.getSnippet().getThumbnails().getDefault();
+
+                System.out.println ("ID: "+rId.getVideoId());
+                System.out.println("Etag:"+singleVideo.getEtag());
+                System.out.println ("Title"+singleVideo.getSnippet().getTitle());
+                System.out.println("DateTime: "+singleVideo.getSnippet().getPublishedAt());
+                System.out.println(singleVideo.getSnippet().getChannelId());
+                System.out.println(singleVideo.getSnippet().getChannelTitle());
+                System.out.println(singleVideo.getSnippet().getDescription());
+                System.out.println(thumbnail.getUrl());
+
+
+
+
+
+
+                System.out.println("\n-------------------------------------------------------------\n");
+            }
+        }
+    }
+
 
 
 

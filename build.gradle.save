@@ -29,22 +29,12 @@ repositories {
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
-
     compile "javax.ws.rs:jsr311-api:+"
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:+'
-    compile 'com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0'
     compile 'com.google.apis:google-api-services-youtube:v3-rev178-1.22.0'
+    compile '
     compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.4'
-    compile 'com.google.oauth-client:google-oauth-client-java6:1.22.0'
-    compile 'com.google.api-client:google-api-client-extensions:+'
-    compile 'com.google.api-client:google-api-client:1.20.0'
     compile 'org.slf4j:slf4j-api:1.7.13'
-    // https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty
-    compile group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.11.0-beta'
-    compile 'org.slf4j:slf4j-simple:1.7.21'
-
-
-
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
@@ -72,3 +62,4 @@ task deploy(type:Exec) {
         commandLine  'asadmin', 'deploy', '--contextroot', '/', 'build/libs/myYoutubeREST.war'
     }
 }
+

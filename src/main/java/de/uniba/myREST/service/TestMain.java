@@ -1,5 +1,6 @@
 package de.uniba.myREST.service;
 
+import com.google.api.services.youtube.model.SearchResult;
 import de.uniba.myREST.engine.YoutubeEngine;
 import de.uniba.myREST.response.YoutubeResponse;
 
@@ -15,12 +16,7 @@ public class TestMain {
 
 
 
-        YoutubeEngine youtubeEngineObject = new YoutubeEngine();
-        for (YoutubeResponse response:youtubeEngineObject.getYoutubeVideosFromEngine("abcd")){
-
-            System.out.println(response.getVideoTitle());
-
-        }
+        YoutubeEngine.getYoutubeVideosFromEngine("Germany");
 
 
 

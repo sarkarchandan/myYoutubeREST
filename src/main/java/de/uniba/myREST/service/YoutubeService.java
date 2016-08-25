@@ -22,6 +22,7 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
  * Created by chandan on 23.08.16.
  */
 
+
 @Path("/youtubeVideos")
 public class YoutubeService {
 
@@ -40,7 +41,8 @@ public class YoutubeService {
     @Path("/search")
     @Consumes(TEXT_PLAIN)
     @Produces(APPLICATION_JSON)
-    public Response getYoutubeVideos(@QueryParam("searchQuery") String searchQuery){
+
+    public void getYoutubeVideos(@QueryParam("searchQuery") String searchQuery){
 
         loggerYoutubeService.setLevel(Level.ALL);
         loggerYoutubeService.info("Class YoutubeService: Start Logging");
@@ -51,22 +53,25 @@ public class YoutubeService {
 
         if (searchQuery==null||searchQuery.equals("")){
             loggerYoutubeService.log(Level.WARNING,"Empty search parameter");
-            return Response.status(Response.Status.BAD_REQUEST).entity("Bad Request").build();
+            //return Response.status(Response.Status.BAD_REQUEST).entity("Bad Request").build();
         }
 
         try {
-            List<YoutubeResponse> response = YoutubeEngine.getYoutubeVideosFromEngine(searchQuery);
+            ///List<YoutubeResponse> response = YoutubeEngine.getYoutubeVideosFromEngine(searchQuery);
             loggerYoutubeService.info("Class YoutubeService: Done logging");
-            return Response.ok(response, MediaType.APPLICATION_JSON).build();
+
+            //return Response.ok(response, MediaType.APPLICATION_JSON).build();
 
         }catch (InternalServerErrorException iSE){
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Internal Server Error occured").build();
+            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Internal Server Error occured").build();
         }catch (ForbiddenException fB){
-            return Response.status(Response.Status.FORBIDDEN).entity("Forbidden").build();
+            //return Response.status(Response.Status.FORBIDDEN).entity("Forbidden").build();
         }catch (NotFoundException nF){
-            return Response.status(Response.Status.NOT_FOUND).entity("Resource Not Found").build();
+            //return Response.status(Response.Status.NOT_FOUND).entity("Resource Not Found").build();
         }
 
     }
 
 }
+
+
