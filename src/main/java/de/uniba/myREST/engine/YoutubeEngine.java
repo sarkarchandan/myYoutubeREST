@@ -15,20 +15,19 @@ import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
 import de.uniba.myREST.response.YoutubeResponse;
-//import de.uniba.myREST.engine.Auth;
-import jersey.repackaged.com.google.common.collect.Lists;
+
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
+
 /**
- * Class YoutubeEngine is responsible for establishing connection with youtube with Global Youtube Object and retrieve the desired search result for us
+ * Class YoutubeEngine is responsible for establishing connection with Global Youtube Object and retrieve the desired search result.
  * Created by chandan on 23.08.16.
  */
 public class YoutubeEngine {
@@ -39,58 +38,38 @@ public class YoutubeEngine {
     private static Logger loggerYoutubeEngine = Logger.getLogger(YoutubeEngine.class.getName());
 
     /**
-     * Initializing global variables for property file name and no of Search results.
-     * Property File will be used for authentication purpose for our project in Google Developer Console with pre-established API Key.
+     * Hard-coding the desired no of video objects for testing purpose
      */
-
-    /**
-     * Comment: I am not using api_key any more. Disabling this code segment to test
-    private static final String propertyFileName = "youtube.properties";
-     */
+    //TODO: We will take this as an input query parameter later.
     private static final long noOfVideosRequired = 10;
 
     /**
-     * Defining a Global Instance of the Youtube Object which will be used for API Request to Youtube Data API
+     * We are defining a Global Instance of the Youtube Object which will be used for API Request to Youtube Data Api v3
      */
     private static YouTube youTube;
 
 
-    public static void getYoutubeVideosFromEngine(String searchQuery){
+    /**
+     * Method: Static method getYoutubeVideosFromEngine responsible for establishing Authenticated Connection
+     * with Youtube Data Api v3 and fetch desired no of video resource objects
+     * @param searchQuery
+     * @return List<YoutubeResponse>
+     */
+    public static List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery){
 
-        /**
-         * Declaring a List of Objects to contain the Youtube Videos
-         */
+
         List<YoutubeResponse> youtubeVideoObjectList = new LinkedList<>();
 
-        // This OAuth 2.0 access scope allows for full read/write access to the
-        // authenticated user's account.
-        List<String> scopes = Lists.newArrayList("https://www.googleapis.com/auth/youtube");
 
         loggerYoutubeEngine.setLevel(Level.ALL);
-        loggerYoutubeEngine.info("Class YoutubeEngine: Start Logging");
-
-
-        /**
-         * Comment: I am not using api_key any more. Disabling this code segment to test
-        Properties youtubeProperties = new Properties();
-        try {
-            InputStream inputStream = YoutubeEngine.class.getResourceAsStream("/"+propertyFileName);
-            youtubeProperties.load(inputStream);
-
-
-
-        }catch(IOException e){
-            loggerYoutubeEngine.log(Level.SEVERE,"Class YoutubeEngine: Cannot read necessary properties"+e.getCause());
-        }
-         */
+        loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine: Start Logging");
 
 
         try {
-
 
             /**
-             * Authorization
-             * Generating Refresh token
+             * We have registered with Google Developers Console and generated ClientID, ClientSecret & RefreshToken
+             * with an application registration which will be used here to create our credentials for authenticated Api calls via oAuth 2.0
              */
             String clientID = "862649508795-f16sicfh2gf1129dh7p4nr6on49mv4io.apps.googleusercontent.com";
             String clientSecret = "tiMBfl6J6udwBXPaPTrG_tj6";
@@ -104,40 +83,34 @@ public class YoutubeEngine {
                     .build();
             credential.setRefreshToken(refreshToken);
 
+            /**
+             * Here we are binding our global Youtube object with HTTP_TRANSPORT, JSON_FACTORY and credential object
+             * to make it ready for initiating the connection with Youtube Data Api v3
+             */
             youTube = new YouTube.Builder(Auth.HTTP_TRANSPORT, Auth.JSON_FACTORY,credential)
                     .setApplicationName("newRESTProject")
                     .build();
 
 
-            loggerYoutubeEngine.info("Credential Built");
+            loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine: Credential Built");
 
             /**
-             * Define the API Request for retrieving search result from Youtube
+             * Define the API Request for retrieving search result from Youtube using search method
              */
             YouTube.Search.List searchList = youTube.search().list("id,snippet");
 
             /**
-             * Defining Developer key retrieved from the Google Cloud Console
+             * Fetching temporary access token from the credential object
              * Defining the Query String for the search
              * Defining that we only want video references from the search.
              * Defining that we only want a fixed no of videos
-             * Defining the data we expect about each video object
              */
-            /**
-             * Comment: I am not using api_key any more. Disabling this code segment to test
-             String apiKey  = youtubeProperties.getProperty("youTube.apiKey");
-             searchList.setKey(apiKey);
-             searchList.setKey(credential.getAccessToken());
-             */
-
-
-
 
             searchList.setOauthToken(credential.getAccessToken());
             searchList.setQ(searchQuery);
             searchList.setType("video");
             searchList.setMaxResults(noOfVideosRequired);
-            //searchList.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/defualt/url)");
+
 
             /**
              * Calling the Youtube Data Api to get the Video Objects and store them in a List of SearchResult
@@ -146,52 +119,48 @@ public class YoutubeEngine {
             SearchListResponse searchResponse = searchList.execute();
             List<SearchResult> searchResultList = searchResponse.getItems();
 
+            loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine: Request initiated");
             /**
              * Extracting the Video Data as a list of YoutubeResponse type using Constructor
              */
 
             if(searchResultList==null){
-                loggerYoutubeEngine.log(Level.SEVERE,"We have not found any matching Videos from Youtube Data API");
+                loggerYoutubeEngine.log(Level.SEVERE,"Class YoutubeEngine/Method getYoutubeVideosFromEngine: Matching video list is not found from Youtube Data API");
 
             } else
-                loggerYoutubeEngine.info("We have got a list");
-            prettyPrint(searchResultList.iterator(), searchQuery);
+                loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine:: We have got a matching video list");
 
-            //for(SearchResult eachVideoObject:searchResultList){
+            /**
+             * Calling generateYoutubeResponseObjectList method to return a list of YoutubeResponse objects
+             */
+            youtubeVideoObjectList = generateYoutubeResponseObjectList(searchResultList.iterator());
 
-                //if(eachVideoObject.getKind().equals("youtube#video")) {
-
-                    loggerYoutubeEngine.info("We have got videos");
-                    //youtubeVideoObjectList.add(new YoutubeResponse(eachVideoObject.getId().toString(),
-                      //      eachVideoObject.getSnippet().getTitle().toString(),
-                        //    eachVideoObject.getSnippet().getThumbnails().getDefault().getUrl().toString()));
-                    //System.out.println (eachVideoObject.getId());
-                //}
-            //}
 
         }catch(GoogleJsonResponseException gJRE){
-            loggerYoutubeEngine.log(Level.SEVERE,"There was a service disruption"+gJRE.getCause()+gJRE.getMessage());
+            loggerYoutubeEngine.log(Level.SEVERE,"Class YoutubeEngine/Method getYoutubeVideosFromEngine: There was a service disruption"+gJRE.getCause()+gJRE.getMessage());
         }
         catch (IOException eIO){
-            loggerYoutubeEngine.log(Level.SEVERE,"There was an IO Error"+eIO.getCause()+eIO.getMessage());
+            loggerYoutubeEngine.log(Level.SEVERE,"Class YoutubeEngine/Method getYoutubeVideosFromEngine: There was an IO Error"+eIO.getCause()+eIO.getMessage());
         }
 
-        loggerYoutubeEngine.info("Class YoutubeEngine: Done logging");
-        //return youtubeVideoObjectList;
 
+        return youtubeVideoObjectList;
 
     }
 
 
-    public static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
+    /**
+     * Method: Static method generateYoutubeResponseObjectList returns the video data as list of YoutubeResponse objects.
+     * @param iteratorSearchResults
+     * @return
+     */
+    private static List<YoutubeResponse> generateYoutubeResponseObjectList(Iterator<SearchResult> iteratorSearchResults) {
 
-        System.out.println("\n=============================================================");
-        System.out.println(
-                "   First " + noOfVideosRequired + " videos for search on \"" + query + "\".");
-        System.out.println("=============================================================\n");
+        List<YoutubeResponse> localVideoList = new LinkedList<>();
+
 
         if (!iteratorSearchResults.hasNext()) {
-            System.out.println(" There aren't any results for your query.");
+            loggerYoutubeEngine.info("Class YoutubeEngine/Methdo generateYoutubeResponseObjectList: No matching videos found with the Query");
         }
 
         while (iteratorSearchResults.hasNext()) {
@@ -199,11 +168,18 @@ public class YoutubeEngine {
             SearchResult singleVideo = iteratorSearchResults.next();
             ResourceId rId = singleVideo.getId();
 
-            // Confirm that the result represents a video. Otherwise, the
-            // item will not contain a video ID.
+            /**
+             * Since Youtube Data Api v3 has many other resources to offer apart from videos, this check is a good practice
+             * We are checking the resource against the Kind field of the resource schema.
+             */
             if (rId.getKind().equals("youtube#video")) {
+
                 Thumbnail thumbnail = singleVideo.getSnippet().getThumbnails().getDefault();
 
+                /**
+                 * System.out.println section is temporarily kept for testing.
+                 */
+                //TODO We will remove the System.out statements after finishing our testing.
                 System.out.println ("ID: "+rId.getVideoId());
                 System.out.println("Etag:"+singleVideo.getEtag());
                 System.out.println ("Title"+singleVideo.getSnippet().getTitle());
@@ -214,13 +190,19 @@ public class YoutubeEngine {
                 System.out.println(thumbnail.getUrl());
 
 
+                localVideoList.add(new YoutubeResponse(rId.getVideoId(),
+                        singleVideo.getEtag(),
+                        singleVideo.getSnippet().getTitle(),
+                        singleVideo.getSnippet().getPublishedAt(),
+                        singleVideo.getSnippet().getChannelId(),
+                        singleVideo.getSnippet().getChannelTitle(),
+                        singleVideo.getSnippet().getDescription(),
+                        thumbnail.getUrl()));
 
-
-
-
-                System.out.println("\n-------------------------------------------------------------\n");
             }
         }
+        loggerYoutubeEngine.info("Class YoutubeEngine/Methdo generateYoutubeResponseObjectList: Done logging");
+        return localVideoList;
     }
 
 

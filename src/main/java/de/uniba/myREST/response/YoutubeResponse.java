@@ -13,16 +13,15 @@ public class YoutubeResponse {
     /**
      * Declaring java Util Logging Object for enabling logging in the YoutubeResponse class
      */
-    private Logger loggerYoutubeResponse = Logger.getLogger(YoutubeResponse.class.getName());
 
-    private String videoId;
-    private String videoETag;
-    private String videoTitle;
-    private DateTime videoPublishedAt;
-    private String videoChannelId;
-    private String videoChannelTitle;
-    private String VideoDescription;
-    private String videoThumbnailURL;
+    private String videoId = null;
+    private String videoETag = null;
+    private String videoTitle = null;
+    private DateTime videoPublishedAt = null;
+    private String videoChannelId = null;
+    private String videoChannelTitle = null;
+    private String VideoDescription = null;
+    private String videoThumbnailURL = null;
 
 
     /**
@@ -40,7 +39,6 @@ public class YoutubeResponse {
                            String videoTitle, DateTime videoPublishedAt,
                            String videoChannelId, String videoChannelTitle,
                            String videoDescription, String videoThumbnailURL) {
-        this.loggerYoutubeResponse = loggerYoutubeResponse;
         this.videoId = videoId;
         this.videoETag = videoETag;
         this.videoTitle = videoTitle;
