@@ -41,7 +41,7 @@ public class YoutubeEngine {
      * Hard-coding the desired no of video objects for testing purpose
      */
     //TODO: We will take this as an input query parameter later.
-    private static final long noOfVideosRequired = 10;
+    private static final long noOfVideosRequired = 2;
 
     /**
      * We are defining a Global Instance of the Youtube Object which will be used for API Request to Youtube Data Api v3
@@ -190,14 +190,14 @@ public class YoutubeEngine {
                 System.out.println(thumbnail.getUrl());
 
 
-                localVideoList.add(new YoutubeResponse(rId.getVideoId(),
-                        singleVideo.getEtag(),
-                        singleVideo.getSnippet().getTitle(),
+                localVideoList.add(new YoutubeResponse(rId.getVideoId().toString(),
+                        singleVideo.getEtag().toString(),
+                        singleVideo.getSnippet().getTitle().toString(),
                         singleVideo.getSnippet().getPublishedAt(),
-                        singleVideo.getSnippet().getChannelId(),
-                        singleVideo.getSnippet().getChannelTitle(),
-                        singleVideo.getSnippet().getDescription(),
-                        thumbnail.getUrl()));
+                        singleVideo.getSnippet().getChannelId().toString(),
+                        singleVideo.getSnippet().getChannelTitle().toString(),
+                        singleVideo.getSnippet().getDescription().toString(),
+                        thumbnail.getUrl().toString()));
 
             }
         }

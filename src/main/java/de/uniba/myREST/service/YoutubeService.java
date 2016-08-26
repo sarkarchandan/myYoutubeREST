@@ -57,9 +57,10 @@ public class YoutubeService {
         }
 
         try {
-            GenericEntity<List<YoutubeResponse>> response
-                    = new GenericEntity<List<YoutubeResponse>>(YoutubeEngine.getYoutubeVideosFromEngine(searchQuery)) {};
+            //GenericEntity<List<YoutubeResponse>> response
+              //      = new GenericEntity<List<YoutubeResponse>>(YoutubeEngine.getYoutubeVideosFromEngine(searchQuery)) {};
 
+            List<YoutubeResponse> response = YoutubeEngine.getYoutubeVideosFromEngine(searchQuery);
 
 
             loggerYoutubeService.info("Class YoutubeService/Method getYoutubeVideos: Class YoutubeService: Done logging");
