@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST_main.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST_main.iml" group="myYoutubeREST" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST_test.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST_test.iml" group="myYoutubeREST" />
+    </modules>
+  </component>
+</project>

@@ -34,10 +34,10 @@ dependencies {
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:+'
     compile 'com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0'
     compile 'com.google.apis:google-api-services-youtube:v3-rev178-1.22.0'
-    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.4'
     compile 'com.google.oauth-client:google-oauth-client-java6:1.22.0'
     compile 'com.google.api-client:google-api-client-extensions:+'
     compile 'com.google.api-client:google-api-client:1.20.0'
+ 
     compile 'org.slf4j:slf4j-api:1.7.13'
     // https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty
     compile group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.11.0-beta'

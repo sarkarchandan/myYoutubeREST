@@ -1,0 +1,71 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : myYoutubeREST.war">
+    <output-path>$PROJECT_DIR$/out/artifacts/myYoutubeREST</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="myYoutubeREST.war">
+      <element id="javaee-facet-resources" facet="myYoutubeREST_main/web/Web Gradle : myYoutubeREST.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="myYoutubeREST_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1-ea" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.23.2" />
+          <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0" />
+          <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-youtube:v3-rev178-1.22.0" />
+          <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-java6:1.22.0" />
+          <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client-extensions:1.6.0-beta" />
+          <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-jetty:1.11.0-beta" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-simple:1.7.21" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-common:2.23.2" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-server:2.23.2" />
+          <element id="library" level="project" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1" />
+          <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client:1.22.0" />
+          <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-extensions:1.6.0-beta" />
+          <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Gradle: javax.jdo:jdo2-api:2.3-eb" />
+          <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-extensions:1.6.0-beta" />
+          <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty:6.1.26" />
+          <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b05" />
+          <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.2" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2" />
+          <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b05" />
+          <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b05" />
+          <element id="library" level="project" name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-client:2.23.2" />
+          <element id="library" level="project" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.23.2" />
+          <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Gradle: com.googlecode.jsontoken:jsontoken:1.0" />
+          <element id="library" level="project" name="Gradle: javax.transaction:transaction-api:1.1" />
+          <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty-util:6.1.26" />
+          <element id="library" level="project" name="Gradle: org.mortbay.jetty:servlet-api:2.5-20081211" />
+          <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b05" />
+          <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05" />
+          <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.4" />
+          <element id="library" level="project" name="Gradle: com.google.collections:google-collections:1.0" />
+          <element id="library" level="project" name="Gradle: joda-time:joda-time:1.6" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.0.1" />
+          <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:1.3.9" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.0.3" />
+          <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client:1.22.0" />
+          <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-jackson2:1.22.0" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava-jdk5:17.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.21" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.1" />
+          <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client:1.22.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/myYoutubeREST/exploded/myYoutubeREST.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

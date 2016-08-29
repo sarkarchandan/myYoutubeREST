@@ -2,13 +2,14 @@ package de.uniba.myREST.response;
 
 import com.google.api.client.util.DateTime;
 
+import java.io.Serializable;
 import java.util.logging.Logger;
 
 /**
  * Class YoutubeResponse is primarily responsible for returning JSON objects for every search result for Youtube videos
  * Created by chandan on 23.08.16.
  */
-public class YoutubeResponse {
+public class YoutubeResponse implements Serializable {
 
     /**
      * Declaring java Util Logging Object for enabling logging in the YoutubeResponse class
@@ -17,11 +18,12 @@ public class YoutubeResponse {
     private String videoId = null;
     private String videoETag = null;
     private String videoTitle = null;
-    private DateTime videoPublishedAt = null;
+    private String videoPublishedAt = null;
     private String videoChannelId = null;
     private String videoChannelTitle = null;
     private String VideoDescription = null;
-    private String videoThumbnailURL = null;
+    private String videoThumbnailURI = null;
+    private String videoURI = null;
 
 
     /**
@@ -33,12 +35,19 @@ public class YoutubeResponse {
      * @param videoChannelId
      * @param videoChannelTitle
      * @param videoDescription
-     * @param videoThumbnailURL
+     * @param videoThumbnailURI
+     * @param videoURI
      */
-    public YoutubeResponse(String videoId, String videoETag,
-                           String videoTitle, DateTime videoPublishedAt,
-                           String videoChannelId, String videoChannelTitle,
-                           String videoDescription, String videoThumbnailURL) {
+
+    public YoutubeResponse(String videoId,
+                           String videoETag,
+                           String videoTitle,
+                           String videoPublishedAt,
+                           String videoChannelId,
+                           String videoChannelTitle,
+                           String videoDescription,
+                           String videoThumbnailURI,
+                           String videoURI) {
         this.videoId = videoId;
         this.videoETag = videoETag;
         this.videoTitle = videoTitle;
@@ -46,7 +55,14 @@ public class YoutubeResponse {
         this.videoChannelId = videoChannelId;
         this.videoChannelTitle = videoChannelTitle;
         VideoDescription = videoDescription;
-        this.videoThumbnailURL = videoThumbnailURL;
+        this.videoThumbnailURI = videoThumbnailURI;
+        this.videoURI = videoURI;
+    }
+
+    /**
+     * Default Constructor for class YoutubeResponse
+     */
+    public YoutubeResponse() {
     }
 
     /**
@@ -65,7 +81,7 @@ public class YoutubeResponse {
         return videoTitle;
     }
 
-    public DateTime getVideoPublishedAt() {
+    public String getVideoPublishedAt() {
         return videoPublishedAt;
     }
 
@@ -81,9 +97,12 @@ public class YoutubeResponse {
         return VideoDescription;
     }
 
-    public String getVideoThumbnailURL() {
-        return videoThumbnailURL;
+    public String getVideoThumbnailURI() {
+        return videoThumbnailURI;
     }
+
+    public String getVideoURI() {return videoURI;}
+
 
     public void setVideoId(String videoId) {
         this.videoId = videoId;
@@ -97,7 +116,7 @@ public class YoutubeResponse {
         this.videoTitle = videoTitle;
     }
 
-    public void setVideoPublishedAt(DateTime videoPublishedAt) {
+    public void setVideoPublishedAt(String videoPublishedAt) {
         this.videoPublishedAt = videoPublishedAt;
     }
 
@@ -113,7 +132,7 @@ public class YoutubeResponse {
         VideoDescription = videoDescription;
     }
 
-    public void setVideoThumbnailURL(String videoThumbnailURL) {
-        this.videoThumbnailURL = videoThumbnailURL;
-    }
+    public void setVideoThumbnailURI(String videoThumbnailURI) {this.videoThumbnailURI = videoThumbnailURI;}
+
+    public void setVideoURI(String videoURI) {this.videoURI = videoURI;}
 }

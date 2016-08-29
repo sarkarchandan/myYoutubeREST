@@ -37,11 +37,6 @@ public class YoutubeEngine {
      */
     private static Logger loggerYoutubeEngine = Logger.getLogger(YoutubeEngine.class.getName());
 
-    /**
-     * Hard-coding the desired no of video objects for testing purpose
-     */
-    //TODO: We will take this as an input query parameter later.
-    private static final long noOfVideosRequired = 2;
 
     /**
      * We are defining a Global Instance of the Youtube Object which will be used for API Request to Youtube Data Api v3
@@ -55,7 +50,7 @@ public class YoutubeEngine {
      * @param searchQuery
      * @return List<YoutubeResponse>
      */
-    public static List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery){
+    public static List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery,long noOfVideoResourcesRequired){
 
 
         List<YoutubeResponse> youtubeVideoObjectList = new LinkedList<>();
@@ -109,7 +104,7 @@ public class YoutubeEngine {
             searchList.setOauthToken(credential.getAccessToken());
             searchList.setQ(searchQuery);
             searchList.setType("video");
-            searchList.setMaxResults(noOfVideosRequired);
+            searchList.setMaxResults(noOfVideoResourcesRequired);
 
 
             /**
@@ -176,28 +171,15 @@ public class YoutubeEngine {
 
                 Thumbnail thumbnail = singleVideo.getSnippet().getThumbnails().getDefault();
 
-                /**
-                 * System.out.println section is temporarily kept for testing.
-                 */
-                //TODO We will remove the System.out statements after finishing our testing.
-                System.out.println ("ID: "+rId.getVideoId());
-                System.out.println("Etag:"+singleVideo.getEtag());
-                System.out.println ("Title"+singleVideo.getSnippet().getTitle());
-                System.out.println("DateTime: "+singleVideo.getSnippet().getPublishedAt());
-                System.out.println(singleVideo.getSnippet().getChannelId());
-                System.out.println(singleVideo.getSnippet().getChannelTitle());
-                System.out.println(singleVideo.getSnippet().getDescription());
-                System.out.println(thumbnail.getUrl());
-
-
                 localVideoList.add(new YoutubeResponse(rId.getVideoId().toString(),
                         singleVideo.getEtag().toString(),
                         singleVideo.getSnippet().getTitle().toString(),
-                        singleVideo.getSnippet().getPublishedAt(),
+                        singleVideo.getSnippet().getPublishedAt().toString(),
                         singleVideo.getSnippet().getChannelId().toString(),
                         singleVideo.getSnippet().getChannelTitle().toString(),
                         singleVideo.getSnippet().getDescription().toString(),
-                        thumbnail.getUrl().toString()));
+                        thumbnail.getUrl().toString(),
+                        "https://www.youtube.com/watch?v="+rId.getVideoId().toString()));
 
             }
         }

@@ -4,11 +4,14 @@ import de.uniba.myREST.engine.YoutubeEngine;
 import de.uniba.myREST.response.YoutubeResponse;
 
 import javax.ws.rs.*;
-import javax.ws.rs.core.GenericEntity;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.NoContentException;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.core.*;
+import javax.ws.rs.ext.MessageBodyWriter;
+import javax.ws.rs.ext.Provider;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
@@ -24,13 +27,14 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 
 
 @Path("/youtubeVideos")
-public class YoutubeService {
+public class YoutubeService{
 
 
     /**
      * Declaring the Java Util Logger Object for enabling logging in the YoutubeService class
      */
     private static Logger loggerYoutubeService = Logger.getLogger(YoutubeService.class.getName());
+
 
     /**
      * Method getYoutubeVideos is primary web method providing the RESTful service for producing the Youtube videos on demand
@@ -42,7 +46,7 @@ public class YoutubeService {
     @Consumes(TEXT_PLAIN)
     @Produces(APPLICATION_JSON)
 
-    public Response getYoutubeVideos(@QueryParam("searchQuery") String searchQuery){
+    public Response getYoutubeVideos(@QueryParam("searchQuery") String searchQuery,@QueryParam("noOfResources") long noOfResources){
 
         loggerYoutubeService.setLevel(Level.ALL);
         loggerYoutubeService.info("Class YoutubeService/Method getYoutubeVideos: Start Logging");
@@ -56,24 +60,16 @@ public class YoutubeService {
             return Response.status(Response.Status.BAD_REQUEST).entity("Bad Request").build();
         }
 
-        try {
-            //GenericEntity<List<YoutubeResponse>> response
-              //      = new GenericEntity<List<YoutubeResponse>>(YoutubeEngine.getYoutubeVideosFromEngine(searchQuery)) {};
+            GenericEntity<List<YoutubeResponse>> response
+                    = new GenericEntity<List<YoutubeResponse>>(YoutubeEngine.getYoutubeVideosFromEngine(searchQuery,noOfResources)) {};
 
-            List<YoutubeResponse> response = YoutubeEngine.getYoutubeVideosFromEngine(searchQuery);
+            //List<YoutubeResponse> response = YoutubeEngine.getYoutubeVideosFromEngine(searchQuery,noOfResources);
 
 
             loggerYoutubeService.info("Class YoutubeService/Method getYoutubeVideos: Class YoutubeService: Done logging");
 
             return Response.ok(response, MediaType.APPLICATION_JSON).build();
 
-        }catch (InternalServerErrorException iSE){
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Internal Server Error occured").build();
-        }catch (ForbiddenException fB){
-            return Response.status(Response.Status.FORBIDDEN).entity("Forbidden").build();
-        }catch (NotFoundException nF){
-            return Response.status(Response.Status.NOT_FOUND).entity("Resource Not Found").build();
-        }
 
     }
 

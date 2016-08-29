@@ -4,711 +4,244 @@
     <artifact type="war" name="Gradle : myYoutubeREST.war">
       <output-path>$PROJECT_DIR$/out/artifacts/myYoutubeREST</output-path>
       <properties id="gradle-properties">
-        <options external-project-path="$PROJECT_DIR$" />
+        <options external-project-path="$PROJECT_DIR$"/>
       </properties>
       <root id="archive" name="myYoutubeREST.war">
-        <element id="javaee-facet-resources" facet="myYoutubeREST_main/web/Web Gradle : myYoutubeREST.war" />
+        <element id="javaee-facet-resources" facet="myYoutubeREST_main/web/Web Gradle : myYoutubeREST.war"/>
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
-            <element id="module-output" name="myYoutubeREST_main" />
-            <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+            <element id="module-output" name="myYoutubeREST_main"/>
+            <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main"/>
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1-ea" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.23.2" />
-            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-youtube:v3-rev178-1.22.0" />
-            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.4" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-java6:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client-extensions:1.6.0-beta" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-jetty:1.11.0-beta" />
-            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-simple:1.7.21" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-common:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-server:2.23.2" />
-            <element id="library" level="project" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1" />
-            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.4" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-extensions:1.6.0-beta" />
-            <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
-            <element id="library" level="project" name="Gradle: javax.jdo:jdo2-api:2.3-eb" />
-            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-extensions:1.6.0-beta" />
-            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty:6.1.26" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-client:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.23.2" />
-            <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
-            <element id="library" level="project" name="Gradle: com.googlecode.jsontoken:jsontoken:1.0" />
-            <element id="library" level="project" name="Gradle: javax.transaction:transaction-api:1.1" />
-            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty-util:6.1.26" />
-            <element id="library" level="project" name="Gradle: org.mortbay.jetty:servlet-api:2.5-20081211" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA" />
-            <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.4" />
-            <element id="library" level="project" name="Gradle: com.google.collections:google-collections:1.0" />
-            <element id="library" level="project" name="Gradle: joda-time:joda-time:1.6" />
-            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.0.1" />
-            <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:1.3.9" />
-            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.0.3" />
-            <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
-            <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1" />
-            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-jackson2:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.guava:guava-jdk5:17.0" />
-            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3" />
-            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.21" />
-            <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.1" />
-            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client:1.22.0" />
+            <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1-ea"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.23.2"/>
+            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-youtube:v3-rev178-1.22.0"/>
+            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.4"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-java6:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client-extensions:1.6.0-beta"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-jetty:1.11.0-beta"/>
+            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-simple:1.7.21"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-common:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-server:2.23.2"/>
+            <element id="library" level="project" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1"/>
+            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.4"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-extensions:1.6.0-beta"/>
+            <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5"/>
+            <element id="library" level="project" name="Gradle: javax.jdo:jdo2-api:2.3-eb"/>
+            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-extensions:1.6.0-beta"/>
+            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty:6.1.26"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-client:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.23.2"/>
+            <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final"/>
+            <element id="library" level="project" name="Gradle: com.googlecode.jsontoken:jsontoken:1.0"/>
+            <element id="library" level="project" name="Gradle: javax.transaction:transaction-api:1.1"/>
+            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty-util:6.1.26"/>
+            <element id="library" level="project" name="Gradle: org.mortbay.jetty:servlet-api:2.5-20081211"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA"/>
+            <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.4"/>
+            <element id="library" level="project" name="Gradle: com.google.collections:google-collections:1.0"/>
+            <element id="library" level="project" name="Gradle: joda-time:joda-time:1.6"/>
+            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.0.1"/>
+            <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:1.3.9"/>
+            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.0.3"/>
+            <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1"/>
+            <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1"/>
+            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-jackson2:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.guava:guava-jdk5:17.0"/>
+            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3"/>
+            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.21"/>
+            <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.1"/>
+            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client:1.22.0"/>
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/myYoutubeREST/exploded/myYoutubeREST.war/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/myYoutubeREST/exploded/myYoutubeREST.war/META-INF/MANIFEST.MF"/>
         </element>
       </root>
     </artifact>
     <artifact type="exploded-war" name="Gradle : myYoutubeREST.war (exploded)">
       <output-path>$PROJECT_DIR$/out/artifacts/myYoutubeREST/exploded/myYoutubeREST.war</output-path>
       <properties id="gradle-properties">
-        <options external-project-path="$PROJECT_DIR$" />
+        <options external-project-path="$PROJECT_DIR$"/>
       </properties>
       <root id="root">
-        <element id="javaee-facet-resources" facet="myYoutubeREST_main/web/Web Gradle : myYoutubeREST.war" />
+        <element id="javaee-facet-resources" facet="myYoutubeREST_main/web/Web Gradle : myYoutubeREST.war"/>
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
-            <element id="module-output" name="myYoutubeREST_main" />
-            <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+            <element id="module-output" name="myYoutubeREST_main"/>
+            <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main"/>
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1-ea" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.23.2" />
-            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-youtube:v3-rev178-1.22.0" />
-            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.4" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-java6:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client-extensions:1.6.0-beta" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-jetty:1.11.0-beta" />
-            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-simple:1.7.21" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-common:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-server:2.23.2" />
-            <element id="library" level="project" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1" />
-            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.4" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-extensions:1.6.0-beta" />
-            <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
-            <element id="library" level="project" name="Gradle: javax.jdo:jdo2-api:2.3-eb" />
-            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-extensions:1.6.0-beta" />
-            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty:6.1.26" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-client:2.23.2" />
-            <element id="library" level="project" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.23.2" />
-            <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
-            <element id="library" level="project" name="Gradle: com.googlecode.jsontoken:jsontoken:1.0" />
-            <element id="library" level="project" name="Gradle: javax.transaction:transaction-api:1.1" />
-            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty-util:6.1.26" />
-            <element id="library" level="project" name="Gradle: org.mortbay.jetty:servlet-api:2.5-20081211" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05" />
-            <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA" />
-            <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.4" />
-            <element id="library" level="project" name="Gradle: com.google.collections:google-collections:1.0" />
-            <element id="library" level="project" name="Gradle: joda-time:joda-time:1.6" />
-            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.0.1" />
-            <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:1.3.9" />
-            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.0.3" />
-            <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
-            <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1" />
-            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-jackson2:1.22.0" />
-            <element id="library" level="project" name="Gradle: com.google.guava:guava-jdk5:17.0" />
-            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3" />
-            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.21" />
-            <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.1" />
-            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client:1.22.0" />
+            <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1-ea"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.23.2"/>
+            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.apis:google-api-services-youtube:v3-rev178-1.22.0"/>
+            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.4"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-java6:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client-extensions:1.6.0-beta"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-jetty:1.11.0-beta"/>
+            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-simple:1.7.21"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-common:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-server:2.23.2"/>
+            <element id="library" level="project" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1"/>
+            <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.4"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.oauth-client:google-oauth-client-extensions:1.6.0-beta"/>
+            <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5"/>
+            <element id="library" level="project" name="Gradle: javax.jdo:jdo2-api:2.3-eb"/>
+            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-extensions:1.6.0-beta"/>
+            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty:6.1.26"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.core:jersey-client:2.23.2"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.23.2"/>
+            <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final"/>
+            <element id="library" level="project" name="Gradle: com.googlecode.jsontoken:jsontoken:1.0"/>
+            <element id="library" level="project" name="Gradle: javax.transaction:transaction-api:1.1"/>
+            <element id="library" level="project" name="Gradle: org.mortbay.jetty:jetty-util:6.1.26"/>
+            <element id="library" level="project" name="Gradle: org.mortbay.jetty:servlet-api:2.5-20081211"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05"/>
+            <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA"/>
+            <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.4"/>
+            <element id="library" level="project" name="Gradle: com.google.collections:google-collections:1.0"/>
+            <element id="library" level="project" name="Gradle: joda-time:joda-time:1.6"/>
+            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.0.1"/>
+            <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:1.3.9"/>
+            <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.0.3"/>
+            <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1"/>
+            <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1"/>
+            <element id="library" level="project" name="Gradle: com.google.api-client:google-api-client:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-jackson2:1.22.0"/>
+            <element id="library" level="project" name="Gradle: com.google.guava:guava-jdk5:17.0"/>
+            <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3"/>
+            <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.21"/>
+            <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.1"/>
+            <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client:1.22.0"/>
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/myYoutubeREST/exploded/myYoutubeREST.war/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/myYoutubeREST/exploded/myYoutubeREST.war/META-INF/MANIFEST.MF"/>
         </element>
       </root>
     </artifact>
   </component>
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
+    <option name="DEFAULT_COMPILER" value="Javac"/>
     <resourceExtensions>
-      <entry name=".+\.(properties|xml|html|dtd|tld)" />
-      <entry name=".+\.(gif|png|jpeg|jpg)" />
+      <entry name=".+\.(properties|xml|html|dtd|tld)"/>
+      <entry name=".+\.(gif|png|jpeg|jpg)"/>
     </resourceExtensions>
     <wildcardResourcePatterns>
-      <entry name="!?*.java" />
-      <entry name="!?*.groovy" />
+      <entry name="!?*.java"/>
+      <entry name="!?*.groovy"/>
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
+        <processorPath useClasspath="true"/>
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="myYoutubeREST_main" target="1.8" />
-      <module name="myYoutubeREST_test" target="1.8" />
+      <module name="myYoutubeREST_main" target="1.8"/>
+      <module name="myYoutubeREST_test" target="1.8"/>
     </bytecodeTargetLevel>
   </component>
-  <component name="CopyrightManager" default="" />
+  <component name="CopyrightManager" default=""/>
   <component name="DependencyValidationManager">
-    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+    <option name="SKIP_IMPORT_STATEMENTS" value="false"/>
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false"/>
   <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+    <entry_points version="2.0"/>
   </component>
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="distributionType" value="DEFAULT_WRAPPED"/>
+        <option name="externalProjectPath" value="$PROJECT_DIR$"/>
+        <option name="gradleJvm" value="#JAVA_HOME"/>
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$"/>
           </set>
         </option>
       </GradleProjectSettings>
     </option>
   </component>
   <component name="GradleUISettings">
-    <setting name="root" />
+    <setting name="root"/>
   </component>
   <component name="GradleUISettings2">
-    <setting name="root" />
+    <setting name="root"/>
   </component>
-  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C" />
+  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C"/>
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" />
-    <option name="OPTION_SCOPE" value="protected" />
-    <option name="OPTION_HIERARCHY" value="true" />
-    <option name="OPTION_NAVIGATOR" value="true" />
-    <option name="OPTION_INDEX" value="true" />
-    <option name="OPTION_SEPARATE_INDEX" value="true" />
-    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
-    <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="" />
-    <option name="HEAP_SIZE" />
-    <option name="LOCALE" />
-    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY"/>
+    <option name="OPTION_SCOPE" value="protected"/>
+    <option name="OPTION_HIERARCHY" value="true"/>
+    <option name="OPTION_NAVIGATOR" value="true"/>
+    <option name="OPTION_INDEX" value="true"/>
+    <option name="OPTION_SEPARATE_INDEX" value="true"/>
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false"/>
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false"/>
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false"/>
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true"/>
+    <option name="OPTION_DEPRECATED_LIST" value="true"/>
+    <option name="OTHER_OPTIONS" value=""/>
+    <option name="HEAP_SIZE"/>
+    <option name="LOCALE"/>
+    <option name="OPEN_IN_BROWSER" value="true"/>
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST_main.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST_main.iml" group="myYoutubeREST" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST_test.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST_test.iml" group="myYoutubeREST" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST_main.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST_main.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myYoutubeREST_test.iml" filepath="$PROJECT_DIR$/.idea/modules/myYoutubeREST_test.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/myYoutubeREST.iml" filepath="$PROJECT_DIR$/myYoutubeREST.iml"/>
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" assert-jdk-15="true">
+    <output url="file://$PROJECT_DIR$/out"/>
   </component>
   <component name="SvnBranchConfigurationManager">
-    <option name="mySupportsUserInfoFilter" value="true" />
+    <option name="mySupportsUserInfoFilter" value="true"/>
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-  </component>
-  <component name="libraryTable">
-    <library name="Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.3/f6c3aed1cdfa21b5c1737c915186ea93a95a58bd/jackson-core-2.1.3.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.3/d313b1839906da7422387b180a124c81e13e65a2/jackson-core-2.1.3-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.api-client:google-api-client-extensions:1.6.0-beta">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-extensions/1.6.0-beta/cb2794578fbed437afc8880f4acb78d38b982bad/google-api-client-extensions-1.6.0-beta.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-extensions/1.6.0-beta/b76e1a8a948b98d037a936cee5210b1f460b13b0/google-api-client-extensions-1.6.0-beta-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.api-client:google-api-client:1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.22.0/244350c0c845c583717ade13f5666a452fd0cfa/google-api-client-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.22.0/3cc07afd5540c754663e472c88f4b29c9a31f26e/google-api-client-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.apis:google-api-services-oauth2:v1-rev120-1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-oauth2/v1-rev120-1.22.0/18f20811917a9de0e23f7d7dd33f29de15103b25/google-api-services-oauth2-v1-rev120-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-oauth2/v1-rev120-1.22.0/efa15112816321e050a660983ace85f0aea7b58b/google-api-services-oauth2-v1-rev120-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.apis:google-api-services-youtube:v3-rev178-1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-youtube/v3-rev178-1.22.0/920cb88d6883eb13b5c4d0a4af342cb6a61cd249/google-api-services-youtube-v3-rev178-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-youtube/v3-rev178-1.22.0/a48dac8497fd54bbd11a52e23776bd848dc4734/google-api-services-youtube-v3-rev178-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.code.findbugs:jsr305:1.3.9">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="Gradle: com.google.code.gson:gson:1.7.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/1.7.1/697e3a1fa094a983cd12f7f6f61abf9c6ea52e2/gson-1.7.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/1.7.1/51f6f78aec2d30d0c2bfb4a5f00d456a6f7a5e7e/gson-1.7.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.collections:google-collections:1.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.collections/google-collections/1.0/9ffe71ac6dcab6bc03ea13f5c2e7b2804e69b357/google-collections-1.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.collections/google-collections/1.0/8283dd0edd369f2cb594cd3f2433c498801bcb09/google-collections-1.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.guava:guava-jdk5:17.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/17.0/463f8378feba44df7ba7cd9272d01837dad62b36/guava-jdk5-17.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/17.0/cc6729ce0bc6cc29441cb3a04acad02aeeebb26e/guava-jdk5-17.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.http-client:google-http-client-extensions:1.6.0-beta">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-extensions/1.6.0-beta/1c1410825cc29b8b43a9622886704402e6701010/google-http-client-extensions-1.6.0-beta.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-extensions/1.6.0-beta/2f886ccf01ef04190d67bf3e22725630044806ac/google-http-client-extensions-1.6.0-beta-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.http-client:google-http-client-jackson2:1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.22.0/cc014d64ae11117e159d334c99d9c246d9b36f44/google-http-client-jackson2-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.22.0/cc16d3c93fe3062e6ae3aa9b0db91e159dd1c36b/google-http-client-jackson2-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.http-client:google-http-client:1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.22.0/d441fc58329c4a4c067acec04ac361627f66ecc8/google-http-client-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.22.0/354d5dd5f75febe40347abfa2d9517bae6281e73/google-http-client-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.oauth-client:google-oauth-client-extensions:1.6.0-beta">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client-extensions/1.6.0-beta/12fe09f4245940555a42747866216b1b79dd0dc6/google-oauth-client-extensions-1.6.0-beta.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client-extensions/1.6.0-beta/30c8dafc2ead1578a81200bb0a3274b32916bf4c/google-oauth-client-extensions-1.6.0-beta-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.oauth-client:google-oauth-client-java6:1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client-java6/1.22.0/6cbd19cd33d55bcaac2d842a57f5ade9260bed99/google-oauth-client-java6-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client-java6/1.22.0/a4e7fbfffae692231fbc815b63f3dbf2417e8195/google-oauth-client-java6-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.oauth-client:google-oauth-client-jetty:1.11.0-beta">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client-jetty/1.11.0-beta/7264fbc551ad8219b014feb662b1f1d187c2e7b7/google-oauth-client-jetty-1.11.0-beta.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client-jetty/1.11.0-beta/4f6c93ba6b1cae6ef8fb546908912943bb29830/google-oauth-client-jetty-1.11.0-beta-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.oauth-client:google-oauth-client:1.22.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.22.0/1d63f369ac78e4838a3197147012026e791008cb/google-oauth-client-1.22.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.22.0/c6ede026328eec7ca8bbdbf811f412f300566bf2/google-oauth-client-1.22.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.googlecode.jsontoken:jsontoken:1.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.jsontoken/jsontoken/1.0/96aac7c88082530d860a5a4791c4829409dfddd1/jsontoken-1.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.jsontoken/jsontoken/1.0/c83c35929b7ba3027161374a5ec09546e3a3fb61/jsontoken-1.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: commons-codec:commons-codec:1.4">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/4216af16d38465bbab0f3dff8efa14204f7a399a/commons-codec-1.4.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/5310da9f90e843883309e9e0bf5950faa79882a0/commons-codec-1.4-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: commons-logging:commons-logging:1.1.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/commons-logging-1.1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.annotation:javax.annotation-api:1.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/479c1e06db31c432330183f5cae684163f186146/javax.annotation-api-1.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/ad18a02db08eaee697f812e333f692fc51129e4a/javax.annotation-api-1.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.inject:javax.inject:1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.jdo:jdo2-api:2.3-eb">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.jdo/jdo2-api/2.3-eb/ec6b839251fb235a86ccd23adc4fc62dab07a7d8/jdo2-api-2.3-eb.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.jdo/jdo2-api/2.3-eb/42596956298b59fb58f013082c75bcb41c70bca9/jdo2-api-2.3-eb-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.servlet:servlet-api:2.5">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.5/5959582d97d8b61f4d154ca9e495aafd16726e34/servlet-api-2.5.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.5/21599814ad9a605b86f3e6381571beccd861a32/servlet-api-2.5-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.transaction:transaction-api:1.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.transaction/transaction-api/1.1/2ca09f0b36ca7d71b762e14ea2ff09d5eac57558/transaction-api-1.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.transaction/transaction-api/1.1/d5dad66d06246bd2e1e369cebff27faa9beb065a/transaction-api-1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.validation:validation-api:1.1.0.Final">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/7d49b53caed9bd81d172807c3e096d24f3c57090/validation-api-1.1.0.Final-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0.1/104e9c2b5583cfcfeac0402316221648d6d8ea6b/javax.ws.rs-api-2.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0.1/a20db7429fd8dfff74335ec867472b71c345049b/javax.ws.rs-api-2.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: javax.ws.rs:jsr311-api:1.1-ea">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/jsr311-api/1.1-ea/286121b65f658a51db6373e21413cf8ea6d8726/jsr311-api-1.1-ea.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/jsr311-api/1.1-ea/95cc8b1d819e44ab62dd8e9f6cbd35302eea1df5/jsr311-api-1.1-ea-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: joda-time:joda-time:1.6">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/1.6/5a18504e34c5cbe9259d6fd0123ccf6f16115a41/joda-time-1.6.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/1.6/1c206dcf51d4ef1db4f8e44ab0222b3c91efb0bf/joda-time-1.6-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: junit:junit:4.8.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/c94f54227b08100974c36170dcb53329435fe5ad/junit-4.8.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/cccca612a66b8387c399be31d69daf000de2ac9e/junit-4.8.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.apache.httpcomponents:httpclient:4.0.3">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.0.3/fcacc35075d9c3114da4c4122b42d78786135c90/httpclient-4.0.3.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.0.3/f5ae1dde79e35ce209eb187aa54030c9a088b562/httpclient-4.0.3-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.apache.httpcomponents:httpcore:4.0.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.0.1/e813b8722c387b22e1adccf7914729db09bcb4a9/httpcore-4.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.0.1/69febd50593a006a4593ef64a697b14208a55b7b/httpcore-4.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.4">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.4/8d8b2a3e5bc77ee1be67d060b44ac77d48a27d6e/jackson-core-asl-1.9.4.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.4/6900e0981e0cb1dbef3f5478fea10d08697943f0/jackson-core-asl-1.9.4-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.4">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.4/5206191b35112f50b8e25fcbd3f3b84e12e11cee/jackson-mapper-asl-1.9.4.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.4/b02c74ecea713097e92b037a27cdf9bbd2d96615/jackson-mapper-asl-1.9.4-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.5.0-b05/51becf370a71dad73e6bcc554efb7246ad24c492/aopalliance-repackaged-2.5.0-b05.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.5.0-b05/71228399130f5051a96d2c9363a066d1a8c9d0d/aopalliance-repackaged-2.5.0-b05-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b05">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/javax.inject/2.5.0-b05/aad1872e1bf5e573229b7ec143d6f83f33b753e4/javax.inject-2.5.0-b05.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/javax.inject/2.5.0-b05/194f20942f15218468be44529fe5362bc6b1ed7d/javax.inject-2.5.0-b05-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b05">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.5.0-b05/d54a52f5b869b247348cb0ec08edd432c22ef65f/hk2-api-2.5.0-b05.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.5.0-b05/f442ec8b65df69b7abe57bcbee3acf90af6600bc/hk2-api-2.5.0-b05-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b05">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.5.0-b05/bed6e7565ce9491a53f047c17e3951b4dfd101fa/hk2-locator-2.5.0-b05.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.5.0-b05/3e3d048eae9f2547f8246646aebf3fd8dffdc552/hk2-locator-2.5.0-b05-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b05">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.5.0-b05/ede783b3e16339f83603e3293c83bda7a88526bc/hk2-utils-2.5.0-b05.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.5.0-b05/f7d900a9bec1eaf22de404a8ca8921e5854064b8/hk2-utils-2.5.0-b05-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.hk2:osgi-resource-locator:1.0.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.1/4ed2b2d4738aed5786cfa64cba5a332779c4c708/osgi-resource-locator-1.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.1/b5685f8eaa7d83351b185a82a92abcd1b8b87fc8/osgi-resource-locator-1.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.23.2/eead3375706f2d5df991e14821efe509bfb182e0/jersey-guava-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.23.2/2ad15a107ef0be6b63d3a197acd70b648c5f6ad7/jersey-guava-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.23.2/c9937b31b90d61bd543f6805f93b6c394de6e842/jersey-container-servlet-core-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.23.2/6a4678475ac6c300ff714e3989d9b09b55e16b37/jersey-container-servlet-core-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.23.2/47da89ccedf144858c1a604b69c9b9515c2c9ea/jersey-container-servlet-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.23.2/943a6fc7fbe4448764dd0ff24de9f61f5759c028/jersey-container-servlet-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.core:jersey-client:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.23.2/90ea1d2edb93653d15fce3c3b4a20f2237690900/jersey-client-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.23.2/ab0304591877ec5ef1134625f05b2ccb181c70c7/jersey-client-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.core:jersey-common:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.23.2/84df56324789921fb408985dc1355f628de0b80c/jersey-common-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.23.2/fb3029d4f936cddc6af423dc00c857bc35bae03c/jersey-common-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.core:jersey-server:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.23.2/f17025b8e32b48bee43b2c9ca40e21fc90cf38fb/jersey-server-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.23.2/df33a03c069ab70d114eaefd6ab3dbcde673d739/jersey-server-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.23.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.media/jersey-media-jaxb/2.23.2/25c2d322e193371ab800367f553207290da1cb0b/jersey-media-jaxb-2.23.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.media/jersey-media-jaxb/2.23.2/2feb4ee7af1aca462f8eff2645473f10edce7a88/jersey-media-jaxb-2.23.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.javassist:javassist:3.20.0-GA">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/a9cbcdfb7e9f86fbc74d3afae65f2248bfbf82a0/javassist-3.20.0-GA.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/d8fdc08a455bc0b28bc0bed1f0d032d935cee8e1/javassist-3.20.0-GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.mortbay.jetty:jetty-util:6.1.26">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mortbay.jetty/jetty-util/6.1.26/e5642fe0399814e1687d55a3862aa5a3417226a9/jetty-util-6.1.26.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mortbay.jetty/jetty-util/6.1.26/ca704dfc9e26567bd69ee3f065a1337fa6d296f/jetty-util-6.1.26-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.mortbay.jetty:jetty:6.1.26">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mortbay.jetty/jetty/6.1.26/2f546e289fddd5b1fab1d4199fbb6e9ef43ee4b0/jetty-6.1.26.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mortbay.jetty/jetty/6.1.26/9e275882f6d3400b05674c79e97014a255dfaf43/jetty-6.1.26-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.mortbay.jetty:servlet-api:2.5-20081211">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mortbay.jetty/servlet-api/2.5-20081211/22bff70037e1e6fa7e6413149489552ee2064702/servlet-api-2.5-20081211.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mortbay.jetty/servlet-api/2.5-20081211/b0b7c1931bcdbeb25c2aa4aec14d7b979b53dc51/servlet-api-2.5-20081211-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.slf4j:slf4j-api:1.7.21">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/f285ac123f201fb4b028bac556928d7cf527ef48/slf4j-api-1.7.21-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.slf4j:slf4j-simple:1.7.21">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.21/be4b3c560a37e69b6c58278116740db28832232c/slf4j-simple-1.7.21.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.21/58eb8609a8f14e5bbf4d260ce5f364724079227/slf4j-simple-1.7.21-sources.jar!/" />
-      </SOURCES>
-    </library>
+    <mapping directory="$PROJECT_DIR$" vcs="Git"/>
+    <mapping directory="$PROJECT_DIR$" vcs="Git"/>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <SplitterProportionsDataImpl/>
           </splitter-proportions>
-          <settings />
+          <settings/>
         </UIState>
       </state>
       <state key="Copyright.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <SplitterProportionsDataImpl/>
           </splitter-proportions>
         </UIState>
       </state>
@@ -718,7 +251,7 @@
             <SplitterProportionsDataImpl>
               <option name="proportions">
                 <list>
-                  <option value="0.2" />
+                  <option value="0.2"/>
                 </list>
               </option>
             </SplitterProportionsDataImpl>
@@ -729,9 +262,9 @@
       <state key="ScopeChooserConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <SplitterProportionsDataImpl/>
           </splitter-proportions>
-          <settings />
+          <settings/>
         </UIState>
       </state>
     </states>
