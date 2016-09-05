@@ -1,6 +1,6 @@
 # myYoutubeREST
 
-myYoutubeREST is a Java RESTful practice implementation built in open source RESTful Web Services framework Jersey. [Youtube Data Api v3](https://developers.google.com/youtube/v3/) has been used to build the implementation. Upon entering a keyword and no of return values,  implementation returns a defined no of Youtube videos serialized in JSON objects. Any web browser or REST Client e.g. Chrome Advanced REST Client could be used for it. This implementation is built in Linux environment
+myYoutubeREST is a Java RESTful practice implementation built in open source RESTful Web Services framework Jersey. [Youtube Data Api v3](https://developers.google.com/youtube/v3/) has been used to build the implementation. Upon entering a keyword and no of return values,  implementation returns a defined no of Youtube videos serialized as JSON objects. Any web browser or REST Client e.g. Chrome Advanced REST Client could be used for it. This implementation is built in Linux environment. :octocat:
 ## Assumption
 - This implementation creates Web Application Archive (.war) file and deploys the same in [Glassfish](https://glassfish.java.net/) container which can be downloaded from the link.
 - It assumes that the user has a native installation of [Gradle](https://gradle.org/) or a [Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) pattern may also be used.
@@ -27,7 +27,7 @@ OR
 ```sh
 $ gradle eclipse
 ```
-- Enter the _Client ID_ and _Client Secret_ to and generated _Refresh Token_ for the registered project with Google      Developer Console in the respective fields of the **YoutubeEngine** class of the package _de.uniba.myREST.engine_
+- Enter the _Client ID_ and _Client Secret_ to and generated _Refresh Token_ for the registered project with Google      Developer Console in the respective static fields of the **YoutubeEngine** class of the package _de.uniba.myREST.engine_
 - Make sure that glassfish server container is running.
 - Build the archive and deploy to the Container.
 ```sh
@@ -51,5 +51,6 @@ Open the web browser or Chrome Advanced REST Client and enter the URI with query
 }
 ```
 # Known Issues
-At this point You **YoutubeEngine** class expects the credentials to be entered directly to the class body. I am working to come up with a better method for that.
+At this point **YoutubeEngine** class expects the credentials to be entered directly to the class body. I am working to come up with a better method for that.
 **noOfResources** field is lacking validation as of now. I am working to add validation for it.
+**I am open to any suggestions or comments.**

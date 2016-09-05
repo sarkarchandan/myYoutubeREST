@@ -11,10 +11,6 @@ import java.util.logging.Logger;
  */
 public class YoutubeResponse implements Serializable {
 
-    /**
-     * Declaring java Util Logging Object for enabling logging in the YoutubeResponse class
-     */
-
     private String videoId = null;
     private String videoETag = null;
     private String videoTitle = null;
