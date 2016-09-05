@@ -14,6 +14,7 @@ $ cd myYoutubeREST
 - Go to [Google Developers Console](https://console.developers.google.com)  and create a new Project and right after creating new Project generate _oAuth Client ID_ and _oAuth Client Secret_ for your Project. 
 - Go to [oAuth 2.0 Playground](https://developers.google.com/oauthplayground/) and use the _oAuth Client ID_ and _oAuth Client Secret_ to generate a _Refresh Token_ for your Project which will be useful for oAuth 2.0 authenticated API Call to You tube Data Api. 
 - A comprehensive guide on how to generate the credentials can be found [here](https://youtu.be/ADLmRWZqFOI?list=PLKHNxdZZDQH9Pd-76u1KNZkxvHhXDMxwq) .
+
 ### Import
 - This implementation has been built using IntelliJ Idea but any IDE of user’s choice e.g. Eclipse can be used to import the project. Execute the corresponding gradle plug in to build the project workspace before importing.
 ```sh

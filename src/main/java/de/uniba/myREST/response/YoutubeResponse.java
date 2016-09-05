@@ -6,8 +6,8 @@ import java.io.Serializable;
 import java.util.logging.Logger;
 
 /**
- * Class YoutubeResponse is primarily responsible for returning JSON objects for every search result for Youtube videos
- * Created by chandan on 23.08.16.
+ * Define YoutubeResponse as a datatype
+ * @author Created by chandan on 23.08.16.
  */
 public class YoutubeResponse implements Serializable {
 
@@ -59,80 +59,84 @@ public class YoutubeResponse implements Serializable {
         this.videoURI = videoURI;
     }
 
-    /**
+    /*
      * Default Constructor for class YoutubeResponse
      */
     public YoutubeResponse() {
     }
 
-    /**
-     * Getter and Setter methods for the class YoutubeResponse instance variables
-     * @return
+    /*
+     * Getter and Setter methods for Instance variables.
      */
     public String getVideoId() {
         return videoId;
+    }
+
+    public void setVideoId(String videoId) {
+        this.videoId = videoId;
     }
 
     public String getVideoETag() {
         return videoETag;
     }
 
-    public String getVideoTitle() {
-        return videoTitle;
-    }
-
-    public String getVideoPublishedAt() {
-        return videoPublishedAt;
-    }
-
-    public String getVideoChannelId() {
-        return videoChannelId;
-    }
-
-    public String getVideoChannelTitle() {
-        return videoChannelTitle;
-    }
-
-    public String getVideoDescription() {
-        return VideoDescription;
-    }
-
-    public String getVideoThumbnailURI() {
-        return videoThumbnailURI;
-    }
-
-    public String getVideoURI() {return videoURI;}
-
-
-    public void setVideoId(String videoId) {
-        this.videoId = videoId;
-    }
-
     public void setVideoETag(String videoETag) {
         this.videoETag = videoETag;
+    }
+
+    public String getVideoTitle() {
+        return videoTitle;
     }
 
     public void setVideoTitle(String videoTitle) {
         this.videoTitle = videoTitle;
     }
 
+    public String getVideoPublishedAt() {
+        return videoPublishedAt;
+    }
+
     public void setVideoPublishedAt(String videoPublishedAt) {
         this.videoPublishedAt = videoPublishedAt;
+    }
+
+    public String getVideoChannelId() {
+        return videoChannelId;
     }
 
     public void setVideoChannelId(String videoChannelId) {
         this.videoChannelId = videoChannelId;
     }
 
+    public String getVideoChannelTitle() {
+        return videoChannelTitle;
+    }
+
     public void setVideoChannelTitle(String videoChannelTitle) {
         this.videoChannelTitle = videoChannelTitle;
+    }
+
+    public String getVideoDescription() {
+        return VideoDescription;
     }
 
     public void setVideoDescription(String videoDescription) {
         VideoDescription = videoDescription;
     }
 
-    public void setVideoThumbnailURI(String videoThumbnailURI) {this.videoThumbnailURI = videoThumbnailURI;}
+    public String getVideoThumbnailURI() {
+        return videoThumbnailURI;
+    }
 
-    public void setVideoURI(String videoURI) {this.videoURI = videoURI;}
+    public void setVideoThumbnailURI(String videoThumbnailURI) {
+        this.videoThumbnailURI = videoThumbnailURI;
+    }
+
+    public String getVideoURI() {
+        return videoURI;
+    }
+
+    public void setVideoURI(String videoURI) {
+        this.videoURI = videoURI;
+    }
 }

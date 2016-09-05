@@ -27,27 +27,34 @@ import java.util.logging.Logger;
 
 
 /**
- * Class YoutubeEngine is responsible for establishing connection with Global Youtube Object and retrieve the desired search result.
- * Created by chandan on 23.08.16.
+ * Establish connection with Youtube Data Api v3 and fetch desired no of video resource objects
+ * @author Created by chandan on 23.08.16.
  */
 public class YoutubeEngine {
 
-    /**
+    /*
      * Declaring Java Util Logger object for enabling logging in the YoutubeEngine class
      */
     private static Logger loggerYoutubeEngine = Logger.getLogger(YoutubeEngine.class.getName());
 
 
-    /**
+    /*
      * We are defining a Global Instance of the Youtube Object which will be used for API Request to Youtube Data Api v3
      */
     private static YouTube youTube;
 
+    /*
+     * User's Client ID, Client Secret and Refresh Token for the registered project with Google Developer Console should go here.
+     */
+    private static String clientID = "862649508795-f16sicfh2gf1129dh7p4nr6on49mv4io.apps.googleusercontent.com";
+    private static String clientSecret = "tiMBfl6J6udwBXPaPTrG_tj6";
+    private static String refreshToken = "1/tUebO5PoBaWubw32MYffPYYApOrOZqy0ZIlpSQoUaNw";
+
 
     /**
-     * Method: Static method getYoutubeVideosFromEngine responsible for establishing Authenticated Connection
-     * with Youtube Data Api v3 and fetch desired no of video resource objects
-     * @param searchQuery
+     * Establish Authenticated Connection with Youtube Object and retrieve the desired no of search result for a search query
+     * @param searchQuery {String}
+     * @param noOfVideoResourcesRequired {long}
      * @return List<YoutubeResponse>
      */
     public static List<YoutubeResponse> getYoutubeVideosFromEngine(String searchQuery,long noOfVideoResourcesRequired){
@@ -60,16 +67,12 @@ public class YoutubeEngine {
         loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine: Start Logging");
 
 
+
         try {
 
-            /**
-             * We have registered with Google Developers Console and generated ClientID, ClientSecret & RefreshToken
-             * with an application registration which will be used here to create our credentials for authenticated Api calls via oAuth 2.0
+            /*
+             * Creating credentials for authenticated API Call
              */
-            String clientID = "862649508795-f16sicfh2gf1129dh7p4nr6on49mv4io.apps.googleusercontent.com";
-            String clientSecret = "tiMBfl6J6udwBXPaPTrG_tj6";
-            String refreshToken = "1/tUebO5PoBaWubw32MYffPYYApOrOZqy0ZIlpSQoUaNw";
-
             Credential credential;
             credential = new GoogleCredential.Builder()
                     .setTransport(new NetHttpTransport())
@@ -78,7 +81,7 @@ public class YoutubeEngine {
                     .build();
             credential.setRefreshToken(refreshToken);
 
-            /**
+            /*
              * Here we are binding our global Youtube object with HTTP_TRANSPORT, JSON_FACTORY and credential object
              * to make it ready for initiating the connection with Youtube Data Api v3
              */
@@ -89,12 +92,12 @@ public class YoutubeEngine {
 
             loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine: Credential Built");
 
-            /**
+            /*
              * Define the API Request for retrieving search result from Youtube using search method
              */
             YouTube.Search.List searchList = youTube.search().list("id,snippet");
 
-            /**
+            /*
              * Fetching temporary access token from the credential object
              * Defining the Query String for the search
              * Defining that we only want video references from the search.
@@ -107,7 +110,7 @@ public class YoutubeEngine {
             searchList.setMaxResults(noOfVideoResourcesRequired);
 
 
-            /**
+            /*
              * Calling the Youtube Data Api to get the Video Objects and store them in a List of SearchResult
              * SearchResult data type has been defined in Youtube Data Api
              */
@@ -115,7 +118,7 @@ public class YoutubeEngine {
             List<SearchResult> searchResultList = searchResponse.getItems();
 
             loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine: Request initiated");
-            /**
+            /*
              * Extracting the Video Data as a list of YoutubeResponse type using Constructor
              */
 
@@ -125,7 +128,7 @@ public class YoutubeEngine {
             } else
                 loggerYoutubeEngine.info("Class YoutubeEngine/Method getYoutubeVideosFromEngine:: We have got a matching video list");
 
-            /**
+            /*
              * Calling generateYoutubeResponseObjectList method to return a list of YoutubeResponse objects
              */
             youtubeVideoObjectList = generateYoutubeResponseObjectList(searchResultList.iterator());
@@ -146,8 +149,8 @@ public class YoutubeEngine {
 
     /**
      * Method: Static method generateYoutubeResponseObjectList returns the video data as list of YoutubeResponse objects.
-     * @param iteratorSearchResults
-     * @return
+     * @param iteratorSearchResults {Iterator<SearchResult>}
+     * @return List<YoutubeResponse>
      */
     private static List<YoutubeResponse> generateYoutubeResponseObjectList(Iterator<SearchResult> iteratorSearchResults) {
 
@@ -163,7 +166,7 @@ public class YoutubeEngine {
             SearchResult singleVideo = iteratorSearchResults.next();
             ResourceId rId = singleVideo.getId();
 
-            /**
+            /*
              * Since Youtube Data Api v3 has many other resources to offer apart from videos, this check is a good practice
              * We are checking the resource against the Kind field of the resource schema.
              */
