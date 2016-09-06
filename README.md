@@ -35,7 +35,7 @@ $ gradle build
 $ gradle deploy
 ```
 ## Sample Execution
-Open the web browser or Chrome Advanced REST Client and enter the URI with query string such as: `http://localhost:8080/youtubeVideos/search?searchQuery=Java&noOfResources=5`
+Open the web browser or Chrome Advanced REST Client and enter the URI with query string such as: `http://localhost:8080/youtubeVideos/search?searchQuery=Nexus&noOfResources=5`
 ### Sample Outcome
  ```
  {
