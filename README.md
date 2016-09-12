@@ -1,6 +1,13 @@
 # myYoutubeREST
 
-myYoutubeREST is a Java RESTful practice implementation built in open source RESTful Web Services framework Jersey. [Youtube Data Api v3](https://developers.google.com/youtube/v3/) has been used to build the implementation. Upon entering a keyword and no of return values,  implementation returns a defined no of Youtube videos serialized as JSON objects. Any web browser or REST Client e.g. Chrome Advanced REST Client could be used for it. This implementation is built in Linux environment. :octocat:
+myYoutubeREST is a Java RESTful practice implementation built in open source RESTful Web Services framework Jersey. [Youtube Data Api v3](https://developers.google.com/youtube/v3/) has been used to build the implementation. Upon entering a keyword and no of return values,  implementation returns a defined no of Youtube videos serialized as JSON objects. Any web browser or REST Client e.g. Chrome Advanced REST Client could be used for it. This implementation is built in Linux environment. 
+
+## Ongoing Work:
+
+At this moment this Implementation creates an endpoint to search desired no of youtube videos with a search query parameter and return videos as useful JSON objects. I am working towards creating my interactive practice application where along with returning the response with respect to the  the passed parameters, endpoint will also make some suggestions which may appear useful and worth exploring to the user. 
+
+I am exploring Youtube Data and Analytics API for creating such an application which will drive the user’s probably interactions with the application state. :octocat:
+
 ## Assumption
 - This implementation creates Web Application Archive (.war) file and deploys the same in [Glassfish](https://glassfish.java.net/) container which can be downloaded from the link.
 - It assumes that the user has a native installation of [Gradle](https://gradle.org/) or a [Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) pattern may also be used.
