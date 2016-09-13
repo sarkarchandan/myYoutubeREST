@@ -46,9 +46,9 @@ public class YoutubeEngine {
     /*
      * User's Client ID, Client Secret and Refresh Token for the registered project with Google Developer Console should go here.
      */
-    private static String clientID = "862649508795-f16sicfh2gf1129dh7p4nr6on49mv4io.apps.googleusercontent.com";
-    private static String clientSecret = "tiMBfl6J6udwBXPaPTrG_tj6";
-    private static String refreshToken = "1/tUebO5PoBaWubw32MYffPYYApOrOZqy0ZIlpSQoUaNw";
+    private static String clientID = "Your Client ID goes here";
+    private static String clientSecret = "Your Client Secret goes here";
+    private static String refreshToken = "Your Refresh Token goes here";
 
 
     /**
